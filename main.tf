@@ -2,7 +2,7 @@ resource "random_id" "bucket_prefix" {
   byte_length = 8
 }
 
-resource "google_project" "my_project" {
+variable "my_project" {
   name            = "prj-ito-7cb-dev-cnk"
   project_id      = "prj-ito-7cb-dev-cnk-8992"
 }
