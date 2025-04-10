@@ -3,9 +3,8 @@ resource "random_id" "bucket_prefix" {
 }
 
 resource "google_project" "my_project" {
-  name            = "Gcp-Goat"
-  project_id      = "gcp-goat-${random_id.bucket_prefix.hex}"
-  billing_account = "0188CE-A979FC-DC3EEA"
+  name            = "prj-ito-7cb-dev-cnk"
+  project_id      = "prj-ito-7cb-dev-cnk-8992"
 }
 
 variable "region" {
