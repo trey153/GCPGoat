@@ -26,7 +26,7 @@ resource "google_storage_bucket" "data_bucket" {
   name          = "prod-blogapp-${random_id.bucket_prefix.hex}"
   force_destroy = true
   project       = google_project.my_project.project_id
-  location      = "US"
+  location      = "EUROPE-WEST1"
   storage_class = "STANDARD"
   depends_on = [
     google_project.my_project
@@ -37,7 +37,7 @@ resource "google_storage_bucket" "dev_bucket" {
   name          = "dev-blogapp-${random_id.bucket_prefix.hex}"
   force_destroy = true
   project       = google_project.my_project.project_id
-  location      = "US"
+  location      = "EUROPE-WEST1"
   storage_class = "STANDARD"
   depends_on = [
     google_project.my_project
@@ -489,7 +489,7 @@ resource "google_storage_bucket" "function_bucket" {
   name          = "function-bucket-${random_id.bucket_prefix.hex}"
   force_destroy = true
   project       = google_project.my_project.project_id
-  location      = "US"
+  location      = "EUROPE-WEST1"
   storage_class = "STANDARD"
   depends_on = [
     google_project.my_project
@@ -605,7 +605,7 @@ resource "google_cloudfunctions_function_iam_member" "backend-invoker" {
 resource "google_storage_bucket" "blog" {
   name          = "blog-bucket-${random_id.bucket_prefix.hex}"
   force_destroy = true
-  location      = "US"
+  location      = "EUROPE-WEST1"
   storage_class = "STANDARD"
   project       = google_project.my_project.project_id
   cors {
@@ -684,7 +684,7 @@ resource "google_storage_bucket" "bucket" {
   project                     = google_project.my_project.project_id
   force_destroy               = true
   name                        = "blog-frontend-${random_id.bucket_prefix.hex}"
-  location                    = "US"
+  location                    = "EUROPE-WEST1"
   uniform_bucket_level_access = true
 }
 
