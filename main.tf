@@ -2,14 +2,10 @@ resource "random_id" "bucket_prefix" {
   byte_length = 8
 }
 
-data "google_billing_account" "acct" {
-  display_name = "Billing Account for XP4CLOUD.FR"
-}
-
 resource "google_project" "my_project" {
   name            = "Gcp-Goat"
   project_id      = "gcp-goat-${random_id.bucket_prefix.hex}"
-  billing_account = data.google_billing_account.acct.id
+  billing_account = "0188CE-A979FC-DC3EEA"
 }
 
 variable "region" {
