@@ -3,7 +3,7 @@ resource "random_id" "bucket_prefix" {
 }
 
 data "google_billing_account" "acct" {
-  billing_account = "0188CE-A979FC-DC3EEA"
+  display_name = "Billing Account for XP4CLOUD.FR"
 }
 
 resource "google_project" "my_project" {
