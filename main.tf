@@ -14,7 +14,7 @@ resource "google_project" "my_project" {
 
 variable "region" {
   type    = string
-  default = "us-west1"
+  default = "europe-west1"
 }
 
 provider "google" {
@@ -813,7 +813,7 @@ resource "google_compute_instance" "vm_instance_public" {
   name         = "developer-vm"
   machine_type = var.linux_instance_type
   project      = google_project.my_project.project_id
-  zone         = "us-west1-c"
+  zone         = "europe-west1-c"
   tags         = ["ssh"]
   boot_disk {
     initialize_params {
@@ -865,7 +865,7 @@ resource "google_compute_instance" "vm_instance_admin" {
   name         = "admin-vm"
   machine_type = var.linux_instance_type
   project      = google_project.my_project.project_id
-  zone         = "us-west1-c"
+  zone         = "europe-west1-c"
   tags         = ["ssh"]
   boot_disk {
     initialize_params {
