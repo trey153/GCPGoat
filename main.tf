@@ -499,7 +499,7 @@ resource "google_project_service" "cloud_function_api" {
   project                    = var.project_id
   service                    = "cloudfunctions.googleapis.com"
   disable_dependent_services = true
-  disable_on_destroy         = true
+  disable_on_destroy         = false
 }
 
 # Enable Cloud Build API
@@ -507,14 +507,14 @@ resource "google_project_service" "cloud_build_api" {
   project                    = var.project_id
   service                    = "cloudbuild.googleapis.com"
   disable_dependent_services = true
-  disable_on_destroy         = true
+  disable_on_destroy         = false
 }
 
 resource "google_project_service" "cloud_ar_api" {
   project                    = var.project_id
   service                    = "artifactregistry.googleapis.com"
   disable_dependent_services = true
-  disable_on_destroy         = true
+  disable_on_destroy         = false
 }
 
 
@@ -522,7 +522,7 @@ resource "google_project_service" "cloud_run_api" {
   project                    = var.project_id
   service                    = "run.googleapis.com"
   disable_dependent_services = true
-  disable_on_destroy         = true
+  disable_on_destroy         = false
 }
 # Add source code zip to the Cloud Function's bucket
 resource "google_storage_bucket_object" "zip" {
