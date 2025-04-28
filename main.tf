@@ -48,7 +48,7 @@ resource "google_storage_bucket_iam_member" "add_policy_role" {
 }
 # Dev Bucket
 resource "google_project_iam_custom_role" "dev-role" {
-  role_id     = "development"
+  role_id     = "development1"
   project     = var.project_id
   title       = "Dev role"
   description = "Used for dev buckets"
