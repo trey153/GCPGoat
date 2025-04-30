@@ -539,7 +539,7 @@ resource "google_storage_bucket_object" "zip" {
 # Create the Cloud function triggered by a `Finalize` event on the bucket
 resource "google_cloudfunctions_function" "backend-function" {
   name    = "backend-function"
-  runtime = "python37"
+  runtime = "python39"
 
   source_archive_bucket = google_storage_bucket.function_bucket.name
   source_archive_object = google_storage_bucket_object.zip.name
