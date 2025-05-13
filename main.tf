@@ -70,7 +70,7 @@ resource "google_project_service" "firestore" {
 }
 
 resource "google_app_engine_application" "app" {
-  location_id   = "europe-west1"
+  location_id   = "europe-west"
   database_type = "CLOUD_FIRESTORE"
   project       = var.project_id
   depends_on = [
